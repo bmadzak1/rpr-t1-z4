@@ -15,12 +15,19 @@ class PredmetTest {
     }
 
     @Test
-    void daLiJeStudentNaPredmetuTest()
-    {
+    void daLiJeStudentNaPredmetuTest() {
         Student student = new Student("Berin", "Madzak", 17897);
         Predmet predmet = new Predmet("RPR", 12345, 120);
         predmet.upisi(student);
         assertEquals(true, predmet.daLiJeStudentNaPredmetu(student));
+    }
+
+    @Test
+    void promjenaNazivaTest()
+    {
+        Predmet predmet = new Predmet("TP", 24643, 90);
+        predmet.promijeniNaziv("RPR");
+        assertEquals("RPR", predmet.nazivPredmeta);
     }
 
 }

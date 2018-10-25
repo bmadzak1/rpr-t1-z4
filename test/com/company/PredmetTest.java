@@ -36,4 +36,14 @@ class PredmetTest {
         assertEquals(8998, predmet.sifraPredmeta);
     }
 
+    @Test
+    void ispisStudentaTest(){
+        Student student = new Student("Berin", "Madzak", 17897);
+        Predmet predmet = new Predmet("RPR", 12345, 120);
+        predmet.upisi(student);
+        assertEquals(1, predmet.dajTrenutniBrojStudenata());
+        predmet.ispisi(student);
+        assertEquals(0, predmet.dajTrenutniBrojStudenata());
+    }
+
 }

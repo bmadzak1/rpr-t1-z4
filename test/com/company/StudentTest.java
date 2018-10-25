@@ -14,4 +14,10 @@ class StudentTest {
         assertEquals(17897, student.brojIndeksa);
     }
 
+    @Test
+    void toStringTest(){
+        Student student = new Student("Berin", "Madzak", 17897);
+        assertEquals("Madzak Berin (17897)", student.toString());
+    }
+
 }

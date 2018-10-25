@@ -15,6 +15,14 @@ class PredmetTest {
     }
 
     @Test
+    void upisStudentaTest(){
+        Student student = new Student("Berin", "Madzak", 17897);
+        Predmet predmet = new Predmet("RPR", 12345, 120);
+        predmet.upisi(student);
+        assertEquals(1, predmet.dajTrenutniBrojStudenata());
+    }
+
+    @Test
     void daLiJeStudentNaPredmetuTest() {
         Student student = new Student("Berin", "Madzak", 17897);
         Predmet predmet = new Predmet("RPR", 12345, 120);
